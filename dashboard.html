@@ -9,12 +9,13 @@ width, initial-scale=1.0">
 <title>BugMe Issue Tracker</title>
 <link href="dashboard.css" type=text/css rel="stylesheet"/>
 <script src="" type="text/javascript"></script>
+<script src="https://kit.fontawesome.com/3399dec892.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class =container>
         <header>
-            <img src="" alt=>
-            <h3>BugMe Issue Tracker</h3>
+            
+            <h3><span><i class="fas fa-bug"></i></span>BugMe Issue Tracker</h3>
         </header>
         <main>
             <div id= headings>
@@ -38,10 +39,27 @@ width, initial-scale=1.0">
         </main>
         <aside>
             <div id=sidebar>
-                <a href="">Home</a>
-                <a href="">Add User</a>
-                <a href="">New Issue</a>
-                <a href="">Logout</a>
+                <ul>
+                    <li> <a href="/home"> 
+                        <span><i class="fa fa-fw fa-home"></i></span> 
+                        Home</a> 
+                    </li>
+                    <br>
+                    <li> <a href="/user"> 
+                        <span><i class="fas fa-user-plus"></i></span> 
+                        User</a> 
+                    </li>
+                    <br>
+                    <li> <a href="/issue"> 
+                        <span><i class="fas fa-plus-circle"></i></span> 
+                        Issue</a> 
+                    </li>
+                    <br>
+                    <li> <a href="/logout"> 
+                        <span><i class="fas fa-power-off"></i></span>
+                        Logout</a> 
+                    </li>
+                </ul>
             </div>         
     
         </aside>
