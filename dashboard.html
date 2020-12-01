@@ -6,31 +6,47 @@
     <meta name="viewport" content="width=device-
 width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>INFO2180 Project 2</title>
+<title>BugMe Issue Tracker</title>
+<link href="dashboard.css" type=text/css rel="stylesheet"/>
+<script src="" type="text/javascript"></script>
 </head>
 <body>
-    <header>
-        <img src="" alt=>
-        <h3>BugMe Isse Tracker</h3>
-    </header>
-    <main>
-        <h1>Issues</h1>
-        <button>Create New Issue</button>
-        <p>Filter by:</p>
-        <div id=filter_option>
-            <button class = all>ALL</button>
-            <button class = open>OPEN</button>
-            <button class = my_tickets>MY TICKETS</button>
-        </div>
+    <div class =container>
+        <header>
+            <img src="" alt=>
+            <h3>BugMe Issue Tracker</h3>
+        </header>
+        <main>
+            <div id= headings>
+                <h1>Issues</h1>
+                <button id= create>Create New Issue</button>
 
+            </div>
+            
+            
+            <div id=filter_option>
+                <p>Filter by:</p>
+                <button class = all>ALL</button>
+                <button class = open>OPEN</button>
+                <button class = my_tickets>MY TICKETS</button>
+            </div>
+            <div id="result">
 
-    </main>
-    <sidebar>
-        <button class = home>Home</button>
-        <button class = add_user>Add User</button>
-        <button class= new_issue>New Issue</button>
-        <button class = logout>Logout</button>
+            </div>
+    
+    
+        </main>
+        <aside>
+            <div id=sidebar>
+                <a href="">Home</a>
+                <a href="">Add User</a>
+                <a href="">New Issue</a>
+                <a href="">Logout</a>
+            </div>         
+    
+        </aside>
+    </div>
 
-    </sidebar>
+    
 </body>
 </html>
