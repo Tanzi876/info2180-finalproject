@@ -1,0 +1,61 @@
+body {
+    display: grid;
+    grid-template-columns: 260px auto;
+    grid-template-areas: "header header", "main .form", "main .asidenav";
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    grid-column: 1/ span 2;
+    background-color: #00080e;
+    color: white;
+    padding-bottom: 5px;
+}
+
+span {
+    padding: 10px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    margin-left: 2%;
+}
+
+main .form {
+    grid-area: form;
+    grid-column: 2;
+    /*float: right;*/
+}
+
+label, input {
+    display: block;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    border-radius: 5px;
+}
+
+main .sidenav {
+    grid-area: sidenav;
+    grid-column: 1;
+    /*width: 40%;
+    margin-top: -15px;*/
+    background-color: rgb(188, 196, 194);
+    padding-left: -3%;
+}
+
+ul {
+    list-style: none;
+}
