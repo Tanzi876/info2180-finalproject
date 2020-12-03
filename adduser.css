@@ -1,7 +1,5 @@
 body {
-    display: grid;
-    grid-template-columns: 260px auto;
-    grid-template-areas: "header header", "main .form", "main .asidenav";
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 html, body {
@@ -10,10 +8,10 @@ html, body {
 }
 
 header {
-    grid-column: 1/ span 2;
     background-color: #00080e;
     color: white;
     padding-bottom: 5px;
+    margin-top: -20px;
 }
 
 span {
@@ -26,13 +24,17 @@ h1 {
 
 h2 {
     margin-left: 2%;
+    color: white;
+    background-color: black;
+    /*padding: 20px;*/
+    padding-top: 20px;
 }
 
-main .form {
+/*main .form {
     grid-area: form;
     grid-column: 2;
-    /*float: right;*/
-}
+    /*float: right;
+}*/
 
 label, input {
     display: block;
@@ -45,17 +47,53 @@ label {
 
 input {
     border-radius: 5px;
-}
-
-main .sidenav {
-    grid-area: sidenav;
-    grid-column: 1;
-    /*width: 40%;
-    margin-top: -15px;*/
-    background-color: rgb(188, 196, 194);
-    padding-left: -3%;
+    width: 90%;
+    height: 40px;
+    background-color: whitesmoke;
+    /*border: none;*/
+    border-style: solid;
+    border-color: rgba(184, 184, 184, 0.918);
 }
 
 ul {
     list-style: none;
+}
+
+li {
+    padding-bottom: 20px;
+    margin-left: -50px;
+    font-size: 15px;
+}
+
+.md {
+    float: left;
+    width: 15.33%;
+    padding: 10px;
+    height: 800px;
+    /*margin-bottom: 10px;*/
+    background-color: rgb(188, 196, 194);
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.form {
+    float: right;
+    width: 45.33%;
+    padding: 10px;
+    margin-right: 450px;
+}
+
+#btn {
+    background-color: rgb(35, 123, 206);
+    border-color: rgb(28, 109, 184);
+    color: white;
+    /*border: none;*/
+    border-style: solid;
+    width: 27%;
+    padding: 10px;
+    border-radius: 5px;
 }
