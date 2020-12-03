@@ -23,12 +23,7 @@ main .container{
     width: 995px;
 }
 header{
-<<<<<<< HEAD
-    grid-area: header;
-   
-=======
     grid-area: header;   
->>>>>>> dashboard
     display :flex;
     justify-content: center;
     align-items: left;
@@ -40,21 +35,6 @@ header{
     padding: 0px 0px 0px 0px;
     font-size: 13px;
 }
-<<<<<<< HEAD
-
-.container{
-    display: grid;
-    grid-gap: 1em;    
-    grid-auto-rows: minmax(100px,auto);
-    grid-auto-columns: minmax(100px,auto);
-    grid-template-areas: 
-    "header  header"
-    "sidebar main"
-    "footer  footer";
-
-}
-
-=======
 span{
     padding-right: 20px;
     margin-left: 20px;
@@ -62,7 +42,6 @@ span{
 
 
 
->>>>>>> dashboard
 #create{
     text-align:right;
     background-color: #48bb78;
@@ -80,19 +59,6 @@ span{
     font-weight: bold;
 
 }
-<<<<<<< HEAD
-main{
-    grid-area: main;
-    grid-column: 2;
-    padding: 15px;
-    margin: auto;
-    border-radius: 4px;
-    width: 85%;
-    height: auto;
-}
-=======
-
->>>>>>> dashboard
 
 #headings{
     display: flex;
@@ -174,17 +140,7 @@ ul {
     padding-left: 0px;
     
 }
-<<<<<<< HEAD
-ul {
-    list-style-type: none;
-}
 a:link {
     text-decoration: none;
     color: black;
 }
-=======
-a:link {
-    text-decoration: none;
-    color: black;
-}
->>>>>>> dashboard
