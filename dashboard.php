@@ -25,7 +25,7 @@
                     echo "<th>Created</th>";
                 echo"</tr>";
                 foreach($result as $row){
-                  echo "<td>".$row['id'].$row['title']."</td>";
+                  echo "<td>".$row['id']." <a href='#'> <div id= link>".$row['title']."</div> </a></td>";
                   echo "<td>".$row['type']."</td>";
                   echo "<td>".$row['status']."</td>";
                   echo "<td>".$row['assigned_to']."</td>";
@@ -48,7 +48,7 @@
                     echo "<th>Created</th>";
                 echo"</tr>";
                 foreach($result as $row){
-                    echo "<td>".$row['id'].$row['title']."</td>";
+                  echo "<td>".$row['id']." <a href='#'> <div id= link>".$row['title']."</div> </a></td>";
                   echo "<td>".$row['type']."</td>";
                   echo "<td>".$row['status']."</td>";
                   echo "<td>".$row['assigned_to']."</td>";
@@ -72,7 +72,7 @@
                     echo "<th>Created</th>";
                 echo"</tr>";
                 foreach($result as $row){
-                  echo "<td>".$row['id'].$row['title']."</td>";
+                  echo "<td>".$row['id']." <a href='#'> <div id= link>".$row['title']."</div> </a></td>";
                   echo "<td>".$row['type']."</td>";
                   echo "<td>".$row['status']."</td>";
                   echo "<td>".$row['assigned_to']."</td>";
