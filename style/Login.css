@@ -1,0 +1,48 @@
+
+
+.loginBtn{
+    background-color: dodgerblue;
+	color: #fff;
+    width: 180px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid dodgerblue;
+    box-shadow: 1px 1px 1px 1px rgb(30, 108, 187);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#loginForm{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin: auto;
+	width: 30%;
+	height: 30%;
+}
+
+
+
+
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: #F8F8F8;
+}
+
+input {
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px #F8F8F8;
+}
+  
+p {
+	font-weight: bold;
+}
+
