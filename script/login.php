@@ -1,8 +1,7 @@
 <?php 
     
+    include_once "connectdb.php";
     include_once "errors.php";
-    include_once "server.php";
-  
     $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
 
     if ($contentType !== "application/sgray" && !isset($_POST))
