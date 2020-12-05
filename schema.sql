@@ -19,6 +19,9 @@ CREATE TABLE `User` (
 	`date_joined` DATETIME NOT NULL,
 	PRIMARY KEY (`id`)
 );
+
+
+
 CREATE TABLE `Issue` (
 	`id` int NOT NULL AUTO_INCREMENT,
 	`title` varchar(255),
@@ -33,7 +36,10 @@ CREATE TABLE `Issue` (
 	PRIMARY KEY (`id`)
 );
 
-
+INSERT INTO 'Issue' VALUES('#100','XSS Vulnerability in Add User Form','Bug','OPEN','Tom Brady','2019-11-01'),('#23','Location Service isn't working','Bug','OPEN','Jan Brady','2019-10-15'),
+('#16','Setup Logger','Proposal','CLOSED','Marsha Brady','2019-08-10'),
+('#50','Create API Documentation','Proposal','IN PROGRESS','Mike Brady','2019-10-29'),
+('#24','Allow results to be sorted','Proposal','IN PROGRESS','Marcia Brady','2019-10-20')
 
 /* Foreign keys creation for Created_By and Assigned_To to be referenced in the User table */
 ALTER TABLE `Issue` ADD CONSTRAINT `Issue_fk0` FOREIGN KEY (`assigned_to`) REFERENCES `User`(`id`);
