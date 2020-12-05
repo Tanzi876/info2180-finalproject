@@ -4,11 +4,8 @@ window.onload=function(){
     let my_ticket=document.getElementsByClassName('my_tickets')
     let new_issue=document.getElementById('create')
     let request=new XMLHttpRequest()
-    var norefresh
-
-    $(document).ready(norefresh)
-
-    norefresh=function(){
+    
+    $(document).ready(function(){
         let starter=$('#sidebar ul li a')
         let container=$('#main') 
         starter.onclick=function(){
@@ -19,7 +16,9 @@ window.onload=function(){
             return false;
 
         }
-    }
+    })
+
+    
     new_issue.onclick=function(){
         
         location.href="#"
