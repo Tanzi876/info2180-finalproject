@@ -4,10 +4,24 @@ window.onload=function(){
     let my_ticket=document.getElementsByClassName('my_tickets')
     let new_issue=document.getElementById('create')
     let request=new XMLHttpRequest()
+    var norefresh
 
+    $(document).ready(norefresh)
 
+    norefresh=function(){
+        let starter=$('#sidebar ul li a')
+        let container=$('#main') 
+        starter.onclick=function(){
+            let $this=$(this)
+            target=$this.data('target')
+            container.load(target + '.html')
+
+            return false;
+
+        }
+    }
     new_issue.onclick=function(){
-        //No Page Refresh
+        
         location.href="#"
     }
     all.onclick=function(){
@@ -103,6 +117,6 @@ window.onload=function(){
         }
     }
 
-
+    $
     
 }
