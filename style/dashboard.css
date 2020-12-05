@@ -44,8 +44,8 @@ span{
     margin-left: 20px;
 }
 
-main{
-    margin-right: 300px;
+#main{
+    width: 950px;
     overflow: hidden;
 
 }
@@ -166,4 +166,44 @@ li{
 a:link {
     text-decoration: none;
     color: black;
+}
+
+thead{
+    background-color: #ddd;
+}
+#board{
+    width: 100%;
+    border-collapse: collapse;
+}
+tbody td{
+    padding: 8px;
+}
+#board,th{
+    padding:3px;
+
+}
+td{
+    padding: 3px;
+    text-align: center;
+}
+#iboard tbody tr td:nth-child(1){
+	color: #4d4dff;
+	text-align: left;
+}
+
+
+#board tbody tr td:nth-child(1):hover{
+	color: #6ee0e0;
+	text-decoration: underline;
+}
+.statopen{
+    background-color: green;
+    color: white;
+}
+.statclosed{
+    background-color: orange;
+    color: white;
+}
+.statprogress{
+    background-color:peru;
 }
