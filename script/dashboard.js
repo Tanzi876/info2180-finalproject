@@ -6,7 +6,10 @@ window.onload=function(){
     let request=new XMLHttpRequest()
 
 
-
+    new_issue.onclick=function(){
+        //No Page Refresh
+        location.href="#"
+    }
     all.onclick=function(){
         request.open("GET","dashboard.php",true)
         request.send()
@@ -44,6 +47,26 @@ window.onload=function(){
         request.send()
         request.onreadystatechange=function(){
             if(this.readyState==4 && this.status==200){
+                var data = JSON.parse(this.responseText)
+                console.log(data)
+                var html=""
+                for(var i =0;i<data.lenght;i++){
+                    let id=data[i].id
+                    let title=data[i].title
+                    let type=data[i].type
+                    let status=data[i].status
+                    let assigned_to=data[i].assigned_to
+                    let created=data[i].created
+
+                    html+="<tr>"
+                        html+="<td>"+id+" <a href='#'>"+title+"</a> </td>"
+                        html+="<td>"+type+ "</td>"
+                        html+="<td>"+status+ "</td>"
+                        html+="<td>"+assigned_to+ "</td>"
+                        html+="<td>"+created+ "</td>"
+
+                }
+                document.getElementById("issuesData").innerHTML=html
                 
             }
         }
@@ -55,9 +78,31 @@ window.onload=function(){
         request.send()
         request.onreadystatechange=function(){
             if(this.readyState==4 && this.status==200){
+                var data = JSON.parse(this.responseText)
+                console.log(data)
+                var html=""
+                for(var i =0;i<data.lenght;i++){
+                    let id=data[i].id
+                    let title=data[i].title
+                    let type=data[i].type
+                    let status=data[i].status
+                    let assigned_to=data[i].assigned_to
+                    let created=data[i].created
+
+                    html+="<tr>"
+                        html+="<td>"+id+" <a href='#'>"+title+"</a> </td>"
+                        html+="<td>"+type+ "</td>"
+                        html+="<td>"+status+ "</td>"
+                        html+="<td>"+assigned_to+ "</td>"
+                        html+="<td>"+created+ "</td>"
+
+                }
+                document.getElementById("issuesData").innerHTML=html
                 
             }
         }
     }
+
+
     
 }
