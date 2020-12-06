@@ -4,14 +4,42 @@
     --elemWidth: 70%;
     --p20: 20px;
     --align: 145px;
-}
-header {
-padding-bottom: var(--p20);
-padding-left: var(--align);
+    --m50: 100px;
+    --w10p:2%;
+    --subBlue: #5a5586;
+    --upBlue: #3f3788;
+    --p10: 10px;
+    --p15: 15px;
 }
 
-body{
-    
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: var(--m5);
+    padding-bottom: var(--p20);
+    padding-left: var(--w10p);
+    font-size: var(--p20);
+    display: flex;
+    flex-direction: row;
+    padding-bottom: var(--p10);
+}
+
+h1 {
+    color: white;
+    font-size: medium;
+    font-weight: normal;
+    padding-top: var(--pfe); 
+    padding-bottom: var(--pfe);
+}
+
+h2 {
+    padding: var(--p10);
 }
 
 .pageContainer {
@@ -19,13 +47,42 @@ body{
     flex-direction: row;
 }
 
-a {
-    text-decoration-line: none;
+ul {
+    list-style-type: none;
+    padding-bottom: var(--m5);
 }
 
-aside {
-    width: 10%;
-    margin-right: 50px;
+li {
+    padding-bottom: var(--p15);
+}
+
+i {
+    padding-left: var(--m5);
+    padding-right: var(--p15);
+}
+
+a:hover, {
+    color: var(--upBlue);
+}
+
+#submit:hover {
+    background-color: var(--upBlue);
+}
+
+a {
+    text-decoration-line: none;
+    color: black;
+    font-weight: bold;
+}
+
+aside, .formContainer {
+    height:100vh;
+}
+
+.sidenav {
+    padding-right: var(--m50);
+    background-color: #bbbbbb;
+    text-align: left;
 }
 
 .formContainer {
@@ -36,15 +93,18 @@ aside {
 }
 
 .formElem, label {
-    margin: var(--m5);
+    margin: var(--p10);
     padding-bottom: var(--pfe);
     width: var(--elemWidth);
+    border-radius: var(--m5);
 }
 
 #submit {
+    margin: var(--p10);
+    padding-bottom: var(--pfe);
     border-radius: var(--m5);
     border: none;
-    background-color: #5442f3;
+    background-color: var(--subBlue);
     padding-top: var(--pfe);
     padding-bottom: var(--pfe);
     padding-left: var(--p20);

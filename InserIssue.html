@@ -5,61 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Issue</title>
     <link rel="stylesheet" href="style/InsertIssue.css">
+    <script src="https://kit.fontawesome.com/3399dec892.js" crossorigin="anonymous"></script>
+    <script src="script/InsertIssue.js"></script>
 </head>
 <header>
-    <h1 id="pageTitle">Add Issue</h1>
+    <img src="" alt="">
+    <h1><span><i class="fas fa-bug"></i></span>BugMe Issue Tracker</h1>
 </header>
 <body>
+    
     <div class="pageContainer">
         <aside class="sidenav">
             <div class="md">
                 <ul>
-                    <li> <a href="/home"> 
-                        <span><i class=""></i></span> 
+                    <li> <a id="home" href="../info2180-finalproject/dashboard.html"> 
+                        <span><i class="fa fa-fw fa-home"></i></span> 
                         Home</a> 
                     </li>
-                    <li> <a href="/user"> 
-                        <span><i class=""></i></span> 
-                        User</a> 
+                    <li> <a id="adduser" href="../info2180-finalproject/adduser.html"> 
+                        <span><i class="fas fa-plus-circle"></i></span> 
+                        Add User</a> 
                     </li>
-                    <li> <a href="/issue"> 
-                        <span><i class=""></i></span> 
-                        Issue</a> 
+                    <li> <a id="addissue" href="../info2180-finalproject/InserIssue.html"> 
+                        <span><i class="fas fa-bug"></i></span> 
+                        New Issue</a> 
                     </li>
-                    <li> <a href="/logout"> 
-                        <span><i class=""></i></span>
+                    <li> <a name="logout" id="logout" href="../info2180-finalproject/login.html"> 
+                        <span><i class="fas fa-power-off"></i></i></span>
                         Logout</a> 
                     </li>
                 </ul>
             </div>
         </aside>
         <div class="formContainer">
-            <form action="InsertIssue.php" class="issueForm" id="issueForm" method="post">
+            <h2 id="pageTitle">Create Issue</h2>
+            <form action="script/InsertIssue.php" class="issueForm" id="issueForm" method="post">
                 <label for="title">Title</label>
-                <br><input type="text" name="title" class="formElem" id="title">
+                <br><input type="text" name="title" class="formElem" id="title" placeholder="Title">
                 <br><label for="description">Description</label>
-                <br><textarea rows="5" cols="50" name="description" class="formElem" id="description"></textarea>
+                <br><textarea rows="5" cols="50" name="description" class="formElem" id="description" placeholder="Description"></textarea>
                 <br><label for="assigned_to">Assigned To</label>
                 <br><select name="assigned_to" class="formElem" id="assigned_to">
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
+                    <option selected=true value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
                 </select>
                 <br><label for="type">Type</label>
-                <br><select name="type" class="formElem" id="type" aria-placeholder="Bug">
-                    <option value="bug">Bug</option>
+                <br><select name="type" class="formElem" id="type">
+                    <option selected=true value="bug">Bug</option>
                     <option value="proposal">Proposal</option>
                     <option value="task">Task</option>
                 </select>
                 <br><label for="priority">Priority</label>
-                <br><select name="priority" class="formElem" id="priority" aria-placeholder="Major">
+                <br><select name="priority" class="formElem" id="priority">
                     <option value="minor">Minor</option>
-                    <option value="major">Major</option>
+                    <option selected=true value="major">Major</option>
                     <option value="critical">Critical</option>
                 </select>
-                
                 <br><input type="submit" value="Submit" id="submit">
             </form>
+            <div id="response"></div>
         </div>
         
     </div>
