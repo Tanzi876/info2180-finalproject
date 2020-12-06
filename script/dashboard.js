@@ -7,7 +7,7 @@ window.onload=function(){
     
     $(document).ready(function(){
         let starter=$('#sidebar ul li a')
-        let container=$('#main') 
+        let container=$('.container') 
         starter.onclick=function(){
             let $this=$(this)
             target=$this.data('target')
@@ -21,7 +21,7 @@ window.onload=function(){
     
     new_issue.onclick=function(){
         
-        location.href="#"
+        location.href="InserIssue.html"
     }
     all.onclick=function(){
         request.open("GET","dashboard.php",true)
