@@ -12,24 +12,7 @@ window.onclick = function(){
         };       
     }
     requests.open('POST', 'script/InsertIssue.php?', true);
-    requests.send('query=SELECT id FROM user');
-    loadOptions(); 
+    requests.send('query=""');
+    //loadOptions(); 
 
-    // submit.addEventListener('click', function(e){
-    //     e.preventDefault;
-    //     const fields = document.getElementsByClassName("formElem");
-    //     fields.forEach(element => {
-    //         if(empty(element)){
-    //             element.style.backgroundColor = "red";
-    //         }
-    //     });
-    //     requests.onreadystatechange = function() {
-    //         if(requests.readyState == 4 && requests.status == 200) {
-    //             responseArea.innerHTML = requests.responseText;
-    //         }
-    //     };
-    // });
-    // requests.open('POST', 'script/InsertIssue.php?', true);
-    // requests.send('query=clicked');
-    // loadOptions(); 
 }

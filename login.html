@@ -1,12 +1,54 @@
-<div id="loginF">
-
-
-
-	<label> Email address</label>
-	<input type="text" id="email" class="email" name="email" required> 
-	<label> Password</label>
-
-
-	<input type="Password" id="pword" class="pword" name="password" required> 
-	<button id="loginBtn" class="loginBtn">Login</button>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style/InsertIssue.css">
+    <script src="https://kit.fontawesome.com/3399dec892.js" crossorigin="anonymous"></script>
+    <script src="script/InsertIssue.js"></script>
+</head>
+<header>
+    <img src="" alt="">
+    <h1><span><i class="fas fa-bug"></i></span>BugMe Issue Tracker</h1>
+</header>
+<body>
+    
+    <div class="pageContainer">
+        <aside class="sidenav">
+            <div class="md">
+                <ul>
+                    <li> <a id="home" href="../info2180-finalproject/dashboard.html"> 
+                        <span><i class="fa fa-fw fa-home"></i></span> 
+                        Home</a> 
+                    </li>
+                    <li> <a id="adduser" href="../info2180-finalproject/adduser.html"> 
+                        <span><i class="fas fa-plus-circle"></i></span> 
+                        Add User</a> 
+                    </li>
+                    <li> <a id="addissue" href="../info2180-finalproject/InserIssue.html"> 
+                        <span><i class="fas fa-bug"></i></span> 
+                        New Issue</a> 
+                    </li>
+                    <li> <a name="logout" id="logout" href="../info2180-finalproject/login.html"> 
+                        <span><i class="fas fa-power-off"></i></i></span>
+                        Logout</a> 
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <div class="formContainer">
+            <h2 id="pageTitle">Login</h2>
+            <form action="script/Login.php" method="POST" id="loginF">
+                <label> Email address</label>
+                <input type="text" id="email" class="email" name="email" required> 
+                <label> Password</label>
+                <input type="Password" id="pword" class="pword" name="password" required> 
+                <button id="loginBtn" class="loginBtn">Login</button>
+            </form action="Login.php" method="POST">
+            
+        </div>
+        
+    </div>
+</body>
+</html>
