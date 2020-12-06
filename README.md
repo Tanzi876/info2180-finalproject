@@ -11,6 +11,8 @@ Dashboard assigned to Tanya-Lee Lawrence
 
 Create a New Issue assigned to Marlon Lewis
 
+Viewing Full Job Details assigned to Brandon Tucker
+
 Viewing Full Job Details Done by Marlon Lewis
 
 No page Refresh done by Tanya-Lee Lawrence
