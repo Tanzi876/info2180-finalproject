@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Add A New User</title>
-        <link rel="stylesheet" href="adduser.css">
+        <link rel="stylesheet" href="style/adduser.css">
         <script src="https://kit.fontawesome.com/3399dec892.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -13,24 +13,24 @@
             </h2>
         </header>
         <main>
-            <form id="form" class="form">
+            <form id="form" class="form" method="post" action="script/adduser.php">
                 <h1>New User</h1>
                 <div class = "newuser-form">
                     <label>Firstname</label>
-                    <input type="text" id="firstname" name="firstname">
+                    <input type="text" id="firstname" name="firstname" required>
                     <br><label>Lastname</label>
-                    <input type="text" id="lastname" name="lastname">
+                    <input type="text" id="lastname" name="lastname" required>
                     <br><label>Password</label>
-                    <input type="text" id="password" name="password">
+                    <input type="password" id="password" name="password" required>
                     <br><label>Email</label>
-                    <input type="text" id="email" name="email">
+                    <input type="text" id="email" name="email" required>
                 </div><br>
-                <button id="btn" type="submit"> Submit</button>
+                <button id="btn" type="submit" name="submit"> Submit</button>
             </form>
             <aside class="sidenav">
                 <div class="md">
                     <ul>
-                        <li> <a href="/home"> 
+                        <li> <a href="http://localhost/info2180-finalproject/login.html"> 
                             <span><i class="fa fa-fw fa-home"></i></span> 
                             Home</a> 
                         </li>
