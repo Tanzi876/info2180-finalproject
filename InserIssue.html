@@ -4,42 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Issue</title>
-    <link rel="stylesheet" href="InsertIssue.css">
+    <link rel="stylesheet" href="style/InsertIssue.css">
 </head>
+<header>
+    <h1 id="pageTitle">Add Issue</h1>
+</header>
 <body>
     <div class="pageContainer">
-        <h1 id="pageTitle">Add Issue</h1>
-        <div class="formContainer">
-            <form action="InsertIssue.php" class="issueForm" id="issueForm" method="post">
-                <label for="title">Title</label>
-                <input type="text" name="title" class="formElem" id="title">
-                <br><label for="description">Description</label>
-                <textarea rows="5" cols="50" name="description" class="formElem" id="description">
-                <br><label for="assigned_to">Assigned To</label>
-                <select name="assigned_to" class="formElem" id="assigned_to">
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                </select>
-                <br><label for="type">Type</label>
-                <select name="type" class="formElem" id="type" defaultValue>
-                    <option value="bug">Bug</option>
-                    <option value="proposal">Proposal</option>
-                    <option value="task">Task</option>
-                </select>
-                <br><label for="priority">Priority</label>
-                <select name="priority" class="formElem" id="priority" defaultValue="Major">
-                    <option value="minor">Minor</option>
-                    <option value="major">Major</option>
-                    <option value="critical">Critical</option>
-                </select>
-                
-                <input type="hidden" name="status" class="formElem" id="status">
-                <input type="hidden" name="created_by" class="formElem" id="created_by">
-                
-                <input type="submit" value="Submit" id="submit">
-            </form>
-        </div>
         <aside class="sidenav">
             <div class="md">
                 <ul>
@@ -62,6 +33,35 @@
                 </ul>
             </div>
         </aside>
+        <div class="formContainer">
+            <form action="InsertIssue.php" class="issueForm" id="issueForm" method="post">
+                <label for="title">Title</label>
+                <br><input type="text" name="title" class="formElem" id="title">
+                <br><label for="description">Description</label>
+                <br><textarea rows="5" cols="50" name="description" class="formElem" id="description"></textarea>
+                <br><label for="assigned_to">Assigned To</label>
+                <br><select name="assigned_to" class="formElem" id="assigned_to">
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+                <br><label for="type">Type</label>
+                <br><select name="type" class="formElem" id="type" aria-placeholder="Bug">
+                    <option value="bug">Bug</option>
+                    <option value="proposal">Proposal</option>
+                    <option value="task">Task</option>
+                </select>
+                <br><label for="priority">Priority</label>
+                <br><select name="priority" class="formElem" id="priority" aria-placeholder="Major">
+                    <option value="minor">Minor</option>
+                    <option value="major">Major</option>
+                    <option value="critical">Critical</option>
+                </select>
+                
+                <br><input type="submit" value="Submit" id="submit">
+            </form>
+        </div>
+        
     </div>
 </body>
 </html>

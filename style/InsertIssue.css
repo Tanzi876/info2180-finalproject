@@ -1,0 +1,54 @@
+:root{
+    --m5: 5px;
+    --pfe: 3px;
+    --elemWidth: 70%;
+    --p20: 20px;
+    --align: 145px;
+}
+header {
+padding-bottom: var(--p20);
+padding-left: var(--align);
+}
+
+body{
+    
+}
+
+.pageContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+a {
+    text-decoration-line: none;
+}
+
+aside {
+    width: 10%;
+    margin-right: 50px;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+}
+
+.formElem, label {
+    margin: var(--m5);
+    padding-bottom: var(--pfe);
+    width: var(--elemWidth);
+}
+
+#submit {
+    border-radius: var(--m5);
+    border: none;
+    background-color: #5442f3;
+    padding-top: var(--pfe);
+    padding-bottom: var(--pfe);
+    padding-left: var(--p20);
+    padding-right: var(--p20);
+    color: White;
+    align-items: left;
+}
