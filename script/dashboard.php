@@ -1,12 +1,12 @@
 <?php
     include_once "connectdb.php";
     
-    
+    session_start();
     
     $all=$_GET['all'];
     $open=$_GET['open'];
     $my_tickets=$_GET['my_tickets'];
-    session_start();
+    
     
         if(isset($all)|| !empty($all)){
             $conn = connectdb();
