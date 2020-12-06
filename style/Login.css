@@ -36,7 +36,24 @@ span{
     cursor: pointer;
     font-size: 15px;
 }
+label, input {
+    display: block;
+}
 
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    border-radius: 5px;
+    width: 90%;
+    height: 40px;
+    background-color: whitesmoke;
+    /*border: none;*/
+    border-style: solid;
+    border-color: rgba(184, 184, 184, 0.918);
+}
 #loginForm{
 	display: flex;
 	flex-direction: column;
