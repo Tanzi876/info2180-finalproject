@@ -21,7 +21,7 @@ window.onload=function(){
     
     new_issue.onclick=function(){
         
-        location.href="#"
+        location.href="InserIssue.html"
     }
     all.onclick=function(){
         request.open("GET","dashboard.php",true)
