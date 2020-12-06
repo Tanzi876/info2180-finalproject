@@ -76,6 +76,7 @@ span{
     
 
 
+
 #headings{
     display: flex;
     justify-content: space-between;
@@ -166,8 +167,6 @@ a:link {
     text-decoration: none;
     color: black;
 }
-<<<<<<< HEAD:style/dashboard.css
-=======
 
 thead{
     background-color: #ddd;
@@ -208,4 +207,4 @@ td{
 .statprogress{
     background-color:peru;
 }
->>>>>>> dashboard:dashboard.css
+
