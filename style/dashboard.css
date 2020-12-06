@@ -55,7 +55,7 @@ span{
     
     background-color: #48bb78;
     height: 50px;
-    width: 250px;
+    width: 210px;
     display: flex;
     text-align: center;
     align-items: center;
@@ -69,6 +69,7 @@ span{
     border-style: solid;
     padding:5px;
     border-width: 0;
+    cursor: pointer;
 
     
     

@@ -7,7 +7,7 @@ window.onload=function(){
     
     $(document).ready(function(){
         let starter=$('#sidebar ul li a')
-        let container=$('#main') 
+        let container=$('.container') 
         starter.onclick=function(){
             let $this=$(this)
             target=$this.data('target')
