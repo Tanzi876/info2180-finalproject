@@ -45,6 +45,16 @@ window.onload=function(){
                         html+="<td>"+status+ "</td>"
                         html+="<td>"+assigned_to+ "</td>"
                         html+="<td>"+created+ "</td>"
+                    if(status=='Open'){
+                        status.classList.add('statopen')
+                    }
+                    if(status=='closed'){
+                        status.classList.add('statclosed')
+                    }
+                    if(status=='in progress'){
+                        status.classList.add('statprogress')
+                    }
+                    
 
                 }
                 document.getElementById("issuesData").innerHTML=html
@@ -77,7 +87,10 @@ window.onload=function(){
                         html+="<td>"+status+ "</td>"
                         html+="<td>"+assigned_to+ "</td>"
                         html+="<td>"+created+ "</td>"
-
+                    if(status=='Open'){
+                        status.classList.add('statopen')
+                    }
+                    
                 }
                 document.getElementById("issuesData").innerHTML=html
                 
@@ -109,6 +122,16 @@ window.onload=function(){
                         html+="<td>"+assigned_to+ "</td>"
                         html+="<td>"+created+ "</td>"
 
+                    if(status=='Open'){
+                        status.classList.add('statopen')
+                    }
+                    if(status=='closed'){
+                        status.classList.add('statclosed')
+                    }
+                    if(status=='in progress'){
+                        status.classList.add('statprogress')
+                    }
+
                 }
                 document.getElementById("issuesData").innerHTML=html
                 
@@ -116,6 +139,6 @@ window.onload=function(){
         }
     }
 
-    $
+    
     
 }
