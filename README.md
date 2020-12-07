@@ -1,7 +1,7 @@
 # Info2180-finalproject
 Database done by Tanya-Lee Lawrence 
 
-Add User assigned to Ashley- Ann Ellison
+Add User assigned to Ashley-Ann Ellison
 
 Log in/out assigned to Shandene Gray
 
