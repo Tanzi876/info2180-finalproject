@@ -11,17 +11,18 @@ try{
     if(empty($_POST['query'])){
         ?>
             <?php $sql = "SELECT * FROM user";
-            $string="<script>";
-
+            //$string="<script>";
+            echo "<script>";
             $users = $conn->query($sql)->fetchAll(PDO::FETCH_ASSOC);?>
             <?php foreach ($users as $user) { 
                 // DO NOT INSERT HEADER FUNCTION!!!
-                echo "<script>console.log(".$user['id'].")</script>";
-                $string=$string."<option value='".$user['id']."'>".$user['id']."</option>";
+                $var = $user['id'];
+                echo "<script>console.log({$var})</script>";
+                echo "<option value={$var}>{$var}</option>";
             }
-            header('Location: ../InserIssue.html');
-            ?>
-            <?= $string."</script>";?>
+            //header('Location: ../InserIssue.html');
+            
+            echo "</script>";?>
     
         <?php }; ?>
         
