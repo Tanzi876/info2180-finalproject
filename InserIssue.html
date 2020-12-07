@@ -42,26 +42,17 @@
             <h2 id="pageTitle">Create Issue</h2>
             <form action="script/InsertIssue.php" class="issueForm" id="issueForm" method="post">
                 <label for="title">Title</label>
-                <br><input type="text" name="title" class="formElem" id="title" placeholder="Title">
+                <br><input type="text" name="title" class="formElem user_input" id="title" placeholder="Title">
                 <br><label for="description">Description</label>
-                <br><textarea rows="5" cols="50" name="description" class="formElem" id="description" placeholder="Description"></textarea>
+                <br><textarea rows="5" cols="50" name="description" class="formElem user_input" id="description" placeholder="Description"></textarea>
                 <br><label for="assigned_to">Assigned To</label>
                 <br><select name="assigned_to" class="formElem" id="assigned_to">
-                    <option selected=true value="1">1</option>
-                    <option selected=true value="2">2</option>
-                    <option selected=true value="3">3</option>
                 </select>
                 <br><label for="type">Type</label>
                 <br><select name="type" class="formElem" id="type">
-                    <option selected=true value="bug">Bug</option>
-                    <option value="proposal">Proposal</option>
-                    <option value="task">Task</option>
                 </select>
                 <br><label for="priority">Priority</label>
                 <br><select name="priority" class="formElem" id="priority">
-                    <option value="minor">Minor</option>
-                    <option selected=true value="major">Major</option>
-                    <option value="critical">Critical</option>
                 </select>
                 <br><input type="submit" value="Submit" id="submit">
             </form>
