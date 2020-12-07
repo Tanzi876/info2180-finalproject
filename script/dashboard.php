@@ -8,7 +8,7 @@
     $my_tickets=$_GET['my_tickets'];
     
     
-        if(isset($all)|| !empty($all)){
+        if(isset($all)){
             $conn = connectdb();
             $stmt = $conn->query("SELECT * FROM Issue");
             $result=$stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -21,7 +21,7 @@
     
            
         }
-        if(sset($open)|| !empty($open)){
+        if(isset($open)){
             $conn = $conn = connectdb();
             $stmt = $conn->query("SELECT * FROM Issue where status ='open'");
             $result=$stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -34,9 +34,9 @@
             
         }
     
-        if(isset($my_tickets)|| !empty($my_tickets)){
+        if(isset($my_tickets)){
             $conn = $conn = connectdb();
-            $user=$_SESSION[''];
+            $user=$_SESSION['userID'];
             $stmt = $conn->query("SELECT * FROM Issue where assigned_to like '% $user%'");
             $result=$stmt->fetchAll(PDO::FETCH_ASSOC);
 
