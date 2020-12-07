@@ -1,48 +1,84 @@
-<?php 
-    
-    include_once "connectdb.php";
-    include_once "errors.php";
-    $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
+<?php
 
-    if ($contentType !== "application/sgray" && !isset($_POST))
-        exit(sgray_encode(errMsg("")));
+// login.php
 
-    // Retrieving form data 
-    $content = trim(file_get_contents("php://input"));
-    $decoded = sgray_decode($content, true);
+//starts session and initializes session attributes
+session_start();
+set_session();
 
-    // Query Database using user email 
-    $conn = newConnection();
-    $stmt = $conn->prepare("SELECT * FROM Users WHERE email=:email");
-    $stmt->bindParam(":email", $decoded['email']);
-    
-    $stmt->execute();   
-    $result = $stmt->fetch();
-
-    // Checking if user is present in database
- Returns an error otherwise
-    if(!$result)
-        exit(sgray_encode(errMsg("loginFailed")));
-
-    /*  
-        Check whehther logged in user is admin 
-        Admin uses MD5 hash while normal users use PHP password hashing
-    */
-    if($result['firstname'] == "Admin"){
-        if(md5($decoded['password']) != $result['password'])
-            exit(sgray_encode(errMsg("loginFailed")));
+/**
+ * Perfoms the login function and sets session attributes accordingly
+ * 
+ * @param conx the PDO connection to the database
+ */
+function login(PDO $conx){
+    //gets email and password from login form
+    $emailx = $_POST['email'];
+    echo "<script>console.log('".$emailx."')</script>";
+    $pwd = $_POST['password'];
+    echo "<script>console.log('".$pwd."')</script>";
+    $id_sql = "select id from user where email = '${$emailx}' and password = '${$pwd}'";
+    echo "<script>console.log('".$id_sql."')</script>";
+    if(!empty($id = $conx->query($id_sql)->fetch())){
+        set_session($emailx,$id);
+        $_SESSION['password'] = $pwd;
+        header('Location: ../dashboard.html');
+        echo "";    
     }
-            
-    // Check validaity
-    if(!password_verify($decoded['password'], $result['password']) && $result['firstname'] != "Admin")
-        exit(sgray_encode(errMsg("loginFailed")));
+    set_session();
+    $_SESSION['password'] = "";
+    header('Location: ../login.html');
+}
 
-    // Starting session if valid user
-    session_start();
-    $_SESSION["userID"] = $result['userID'];
-    $_SESSION["loggedIn"] = 1;
+function loginAfterAdd(PDO $conx,$em,$pw){
+    $id_sql = "select id from user where email = '${$em}' and password = '${$pw}'";
+    echo "<script>console.log('".$id_sql."')</script>";
+    if(!empty($id = $conx->query($id_sql)->fetch())){
+        set_session($em,$id);
+        $_SESSION['password'] = $pw;
+        header('Location: ../dashboard.html');
+        echo "";    
+    }
+    set_session();
+    header('Location: ../login.html');
+    $_SESSION['password'] = "";
+}
 
-    exit(sgray_encode(array("status" => true, "body" => "")));
+/**
+ * Sets the logged_in status to 1 if logged in or 0 if not logged in
+ * 
+ * Validates user's email and ID params and initializes login SESSION attributes
+ * @param email string: valid email of user
+ * @param iD integer: 0 represents not_logged_in
+ */
+function set_session( string $email="", int $iD=0){
+        $_SESSION['email'] = $email;
+        $_SESSION['logged_in'] = empty($_SESSION['email'])?0:1;
+        $_SESSION['id'] = $iD;
+        //gets the email and password from login form
+        $_SESSION['email'] = $_POST['email'];
+        $_SESSION['password'] = myHash_PWD($_POST['password']);
+}
+
+/**
+ * Creates a hashed password from the given password
+ * @param myPWD given password 
+ */
+function myHash_PWD(string $myPWD){
+    $myHashPWD = password_hash($myPWD, PASSWORD_DEFAULT);
+    //header('Location: ../login.html');
+    //echo "<script>console.log('".$myHashPWD."')</script>";
+    return $myHashPWD;
+}
+
+//uses connectdb function from connect.php
+include 'connectdb.php';
+$conn = connectdb();
+
+//performs user login function and sets session attributes
+login($conn);
+
+//prints out log in status
+echo $_SESSION['logged_in']==1?"Password matches.":"Password incorrect.";
+
 ?>
-
-
