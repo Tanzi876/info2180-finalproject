@@ -1,4 +1,6 @@
 <?php
+ini_set('display_errors', 'On');
+error_reporting(E_ALL | E_STRICT);
 
 session_start();
 
@@ -10,20 +12,18 @@ try{
 
     if(empty($_POST['query'])){
         ?>
-            <?php $sql = "SELECT * FROM user";
-            //$string="<script>";
-            echo "<script>";
-            $users = $conn->query($sql)->fetchAll(PDO::FETCH_ASSOC);?>
-            <?php foreach ($users as $user) { 
-                // DO NOT INSERT HEADER FUNCTION!!!
-                $var = $user['id'];
-                echo "<script>console.log({$var})</script>";
-                echo "<option value={$var}>{$var}</option>";
-            }
-            //header('Location: ../InserIssue.html');
-            
-            echo "</script>";?>
-    
+        <?php $sql = "SELECT * FROM user";
+        $listv = "";
+        
+        $users = $conn->query($sql)->fetchAll(PDO::FETCH_ASSOC);?>
+        <?php foreach ($users as $user) { 
+            // DO NOT INSERT HEADER FUNCTION!!!
+            $var = $user['id'];
+            //$listv."{$var}";
+            echo "<option value={$var}>{$var}</option>";
+        }
+        ?>
+        
         <?php }; ?>
         
         <?php 
@@ -37,7 +37,9 @@ try{
         //session_destroy();
     }
     
-    if(isset($_POST['submit'])){
+    if(!isset($_POST['submit']) && empty($_GET['query'])){
+        //header('Location: ../InserIssue.html');
+        // echo "<script>";
         // get values form input text and number
         $title = $_POST['title'];
         $description = $_POST['description'];
@@ -54,10 +56,11 @@ try{
 
         if($bool){
             $status = 'Open';
-            $created_by = (int)((isset($_SESSION['id']))?$_SESSION['id']:1);
+            $created_by = 1;
+            /////////////////////////////////////
             if(empty($created_by)){
+                echo "console.log('Empty')";
                 header('Location: ../InserIssue.html');
-
             }
             else{
                 date_default_timezone_set("Jamaica");
@@ -76,20 +79,22 @@ try{
                     // check if mysql insert query successful
                 if($pdoExec)
                 {
-                    header('Location: ../InserIssue.html');
+                    //header('Location: ../InserIssue.html');
                     $submitted = "Issue Submitted";
-                    echo "<script>console.log(".$submitted.")</script>";
+                    echo "<div>{$submitted}</div>";
                 }
                 else{
-                    header('Location: ../InserIssue.html');
+                    //header('Location: ../InserIssue.html');
                     $failed = "Issue Not Submitted";
-                    echo "<script>console.log(".$failed.")</script>";
+                    echo "<div>{$failed}</div>";
+                    echo "<script>console.log({$failed})</script>";
                 }
             }
+            //////////////////////////////
         }else{
-            header('Location: ../InserIssue.html');
-            echo "<script>console.log('One or More Empty Field Detected')</script>";
+            echo "'One or More Empty Field Detected'";
         }
+        // echo "</script>";
     }
     ?>
     <?php
