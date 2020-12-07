@@ -21,7 +21,7 @@ window.onload=function(){
     
     new_issue.onclick=function(){
         
-        location.href="InserIssue.html"
+        location.href="http://localhost/info2180-finalproject/InserIssue.html"
     }
     all.onclick=function(){
         request.open("GET","dashboard.php",true)
