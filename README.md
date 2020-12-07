@@ -5,7 +5,7 @@ Add User assigned to Ashley- Ann Ellison
 
 Log in/out assigned to Shandene Gray
 
-Log in/out Done by Marlon Lewis
+Log in/out Done by Marlon Lewis & Tanya-Lee Lawrence
 
 Dashboard assigned to Tanya-Lee Lawrence
 
